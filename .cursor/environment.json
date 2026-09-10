@@ -1,0 +1,17 @@
+{
+  "name": "FoodBlock",
+  "user": "ubuntu",
+  "install": "bash .cursor/install.sh",
+  "start": "bash .cursor/start.sh",
+  "terminals": [
+    {
+      "name": "sandbox-server",
+      "command": "cd sandbox && node server.js"
+    },
+    {
+      "name": "reference-server",
+      "command": "cd server && DATABASE_URL=postgresql://localhost:5432/foodblock PORT=3000 node index.js"
+    }
+  ],
+  "ports": [3000, 3111]
+}
